@@ -1,16 +1,10 @@
 <h1 align='center'>open the console</h1>
 
-<!-- import printer -->
 <script src="/printer.js"></script>
 <script>
     "use strict";
 
-    // use printer
-    (function(){
-        let meanStack = new Printer('mean stack' , '#' , ' ').write();
-        console.log('\n')
-        meanStack.print();
-        console.log('\n')
-    }());
-    
+    console.log('\n');
+    new Printer('mean stack', '#', ' ').write().print();
+    console.log('\n');
 </script>

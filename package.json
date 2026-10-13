@@ -1,0 +1,35 @@
+{
+  "name": "printer-js",
+  "version": "1.0.0",
+  "description": "Print text as big ASCII-art banners in the terminal or the browser console, using any character as the brush.",
+  "main": "printer.js",
+  "files": [
+    "printer.js"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "ascii",
+    "ascii-art",
+    "banner",
+    "figlet",
+    "console",
+    "terminal",
+    "text",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedElMetwally/printer-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AhmedElMetwally/printer-js/issues"
+  },
+  "homepage": "https://github.com/AhmedElMetwally/printer-js#readme",
+  "author": "Ahmed ElMetwally <ahmed.el.metwally.official@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  }
+}

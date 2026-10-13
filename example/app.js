@@ -2,29 +2,17 @@
 
 const express = require('express');
 const path = require('path');
+const Printer = require('../printer.js');
+
 const app = express();
 
-/**************************************************
- *  import printer
- **************************************************/
-const Printer = require('./lib/printer.js');
+app.get('/printer.js', (req, res) => res.sendFile(path.join(__dirname, '..', 'printer.js')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 
-
-app.listen( 8080 , () => {
-
- /**************************************************
-  *  use printer
-  **************************************************/
-  let meanStack = new Printer('mean stack' , '#' , ' ').write();
-  console.log('\n');
-  meanStack.print();
-  console.log('\n');
-
+app.listen(8080, () => {
+    console.log('\n');
+    new Printer('mean stack', '#', ' ').write().print();
+    console.log('\nopen http://localhost:8080 and check the browser console\n');
 });
 
-
-app.use('/' , express.static(path.join(__dirname, 'public')))
-
-
 module.exports = app;
-
